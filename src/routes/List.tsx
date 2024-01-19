@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { Card, CardContent, Container, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import { archiveUrl } from "../common/api";
 
 const FileListPage = () => {
@@ -22,14 +23,32 @@ const FileListPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Uploaded Files</h1>
-      <ul>
-        {files.map((file: any) => (
-          <li key={file.id}>{file.url}</li> // Adjust according to your file object structure
-        ))}
-      </ul>
-    </div>
+    <Container maxWidth="md">
+      <Typography textAlign="center" variant="h4" component="h1" gutterBottom>
+        Uploaded Files
+      </Typography>
+      {files.map((file: any) => (
+        <a href={file.url} download key={file.id} style={{ textDecoration: "none" }}>
+          <Card
+            key={file.id}
+            variant="outlined"
+            sx={{
+              marginBottom: 2,
+              borderRadius: 3,
+              transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+              "&:hover": {
+                transform: "translateY(-5px)",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+              },
+            }}
+          >
+            <CardContent>
+              <Typography variant="body1">{file.id}</Typography>
+            </CardContent>
+          </Card>
+        </a>
+      ))}
+    </Container>
   );
 };
 

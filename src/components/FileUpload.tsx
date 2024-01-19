@@ -65,16 +65,16 @@ const FileUpload = ({ title }: FileUploadProps) => {
       <Grid item sx={{ width: "80%" }}>
         <TextField fullWidth label="Selected File" value={fileName} margin="normal" InputProps={{ readOnly: true }} disabled={true} />
       </Grid>
-      <Grid item>
+      <Grid item sx={{ width: "80%" }}>
         {!fileName && (
           <label htmlFor="contained-button-file">
-            <Button variant="contained" component="span">
+            <Button fullWidth variant="contained" component="span">
               Choose File
             </Button>
           </label>
         )}
         {fileName && (
-          <Button variant="contained" color="primary" onClick={handleUpload} disabled={!file}>
+          <Button fullWidth variant="contained" color="primary" onClick={handleUpload} disabled={!file}>
             Upload File
           </Button>
         )}

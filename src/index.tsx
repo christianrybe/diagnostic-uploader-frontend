@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Upload from "./routes/Upload";
 import List from "./routes/List";
+import { CssBaseline } from "@mui/material";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <CssBaseline />
   </React.StrictMode>
 );
 

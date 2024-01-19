@@ -1,4 +1,4 @@
-import { Box, Button, Container, CssBaseline, Grid, TextField, Typography } from '@mui/material';
+import { Box, Container, CssBaseline } from '@mui/material';
 import './App.css';
 import FileUpload from './FileUpload';
 
@@ -15,8 +15,7 @@ export default function App() {
             flexDirection: 'column',
             alignItems: 'center',
           }}
-        >
-        
+        >        
           <FileUpload title={'Upload your .tgz file'}  />
         </Box>
       </Container>

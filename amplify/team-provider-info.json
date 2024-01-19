@@ -10,6 +10,14 @@
       "StackName": "amplify-diagnosticuploaderfr-dev-141723",
       "StackId": "arn:aws:cloudformation:eu-north-1:851725385400:stack/amplify-diagnosticuploaderfr-dev-141723/162d4300-b6cd-11ee-ae6f-06a9ab6cb344",
       "AmplifyAppId": "dpmfpm43ycguw"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dpmfpm43ycguw",
+          "type": "cicd"
+        }
+      }
     }
   }
 }

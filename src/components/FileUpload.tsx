@@ -61,7 +61,7 @@ const FileUpload = ({ title }: FileUploadProps) => {
       <Grid item>
         <Typography variant="h5">{title}</Typography>
       </Grid>
-      <input accept="*/*" style={{ display: "none" }} id="contained-button-file" multiple type="file" onChange={handleFileChange} />
+      <input accept=".tgz" style={{ display: "none" }} id="contained-button-file" multiple type="file" onChange={handleFileChange} />
       <Grid item sx={{ width: "80%" }}>
         <TextField fullWidth label="Selected File" value={fileName} margin="normal" InputProps={{ readOnly: true }} disabled={true} />
       </Grid>

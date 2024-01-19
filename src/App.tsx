@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Box, Button, Container, CssBaseline, Grid, TextField, Typography } from '@mui/material';
 import './App.css';
+import FileUpload from './FileUpload';
 
-function App() {
+export default function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Container component="main" maxWidth="sm">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        
+          <FileUpload title={'Upload your .tgz file'}  />
+        </Box>
+      </Container>
   );
 }
-
-export default App;

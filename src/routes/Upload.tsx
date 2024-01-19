@@ -1,6 +1,5 @@
 import { Box, Container, CssBaseline } from "@mui/material";
-import "./App.css";
-import FileUpload from "./FileUpload";
+import FileUpload from "../components/FileUpload";
 
 export default function App() {
   return (
